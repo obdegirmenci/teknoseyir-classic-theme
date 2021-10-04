@@ -1,0 +1,421 @@
+@-moz-document domain("teknoseyir.com") {
+    :root {
+        --ActiveBorder: #C0C0C0;
+        --ActiveCaption: #000080;
+        --ActiveCaptionTest: #FFFFFF;
+        --AppWorkspace: #808080;
+        --Control: #C0C0C0;
+        --ControlDark: #808080;
+        --ControlDarkDark: #000000;
+        --ControlLight: #C0C0C0;
+        --ControlLightLight: #FFFFFF;
+        --ControlText: #000000;
+        --Desktop: #3A6EA5;
+        --GradientActiveCaption: #1084D0;
+        --GradientInactiveCaption: #B5B5B5;
+        --GrayText: #808080;
+        --Highlight: #000080;
+        --HighlightText: #FFFFFF;
+        --HotTrack: #000080;
+        --InactiveBorder: #C0C0C0;
+        --InactiveCaption: #808080;
+        --InactiveCaptionText: #C0C0C0;
+        --Info: #FFFFE1;
+        --InftoText: #000000;
+        --Menu: #C0C0C0;
+        --MenuBar: #C0C0C0;
+        --MenuHighlight: #000080;
+        --MenuText: #000000;
+        --ScrollBar: #C0C0C0;
+        --Window: #FFFFFF;
+        --WindowsFrame: #000000;
+        --WindowsText: #000000;
+    }
+    
+    body {
+        font-family: "MS Sans Serif";
+        
+        background: var(--Desktop);
+        color: var(--WindowsText);
+    }
+    
+    /* ARTICLE */
+    .col-left article {
+        background-color: var(--Control) !important;
+        border: none;
+        border-radius: 0px;
+        padding: 3px;
+        
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlDarkDark),
+            inset -1px 0 0 0 var(--ControlDarkDark),
+            inset 0 1px 0 0 var(--ControlLight),
+            inset 1px -1px 0 0 var(--ControlLight),
+            
+            inset 0 -2px 0 0 var(--ControlDark),
+            inset -2px 0 0 0 var(--ControlDark),
+            inset 0 2px 0 0 var(--ControlLightLight),
+            inset 2px 0 0 0 var(--ControlLightLight)
+        ;
+    }
+    
+    
+    /* ARTICLE TOP */
+    .stream-top {
+        background: linear-gradient(90deg, var(--Highlight) 0%, var(--GradientActiveCaption) 100%);
+        padding: 2px;
+        
+        min-height: auto;
+        height: 18px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        
+    }
+    
+    .stream-top * {
+        color: var(--HighlightText) !important;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 0;
+        
+    }
+    
+    .stream-top > .pull-left, .stream-top > .pull-right {
+        float: none !important;
+    }
+    
+    .stream-top > .pull-left {
+        order: 0;
+        margin-right: 6px;
+    }
+    
+    .stream-top > .author {
+        order: 1;
+    }
+    
+    .stream-top > .author > .username::before {
+        content: "\00a0\00a0[\00a0";
+    }
+    
+    .stream-top > .author > .username::after {
+        content: "\00a0]";
+    }
+    
+    .stream-top > .author::after {
+        content: "\00a0-\00a0\00a0";
+    }
+    
+    .stream-top > a {
+        order: 2;
+    }
+    
+    .stream-top > .secenekler {
+        order: 3;
+        
+        background: var(--Control);
+        width: 16px;
+        height: 14px;
+        margin: auto;
+        margin-right: 0;
+        
+        box-sizing: border-box;
+        
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlDarkDark),
+            inset -1px 0 0 0 var(--ControlDarkDark),
+            inset 0 1px 0 0 var(--ControlLight),
+            inset 1px -1px 0 0 var(--ControlLight),
+            
+            inset 0 -2px 0 0 var(--ControlDark),
+            inset -2px 0 0 0 var(--ControlDark),
+            inset 0 2px 0 0 var(--ControlLightLight),
+            inset 2px 0 0 0 var(--ControlLightLight)
+        ;
+    
+    }
+    
+    .stream-top > .secenekler > a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stream-top > .secenekler > a > i {
+        color: var(--ControlText) !important;
+        font-size: 8px;
+    }
+    
+    .avatar-40 {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    
+    /* DROPDOWN */
+    .stream-top .dropdown-menu {
+        
+        background: var(--Control);
+        
+        border: none;
+        border-radius: 0;
+        padding: 3px;
+        
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlDarkDark),
+            inset -1px 0 0 0 var(--ControlDarkDark),
+            inset 0 1px 0 0 var(--ControlLight),
+            inset 1px -1px 0 0 var(--ControlLight),
+            
+            inset 0 -2px 0 0 var(--ControlDark),
+            inset -2px 0 0 0 var(--ControlDark),
+            inset 0 2px 0 0 var(--ControlLightLight),
+            inset 2px 0 0 0 var(--ControlLightLight)
+        ;
+    }
+    
+    .stream-top .dropdown-menu *{
+        color: var(--ControlText) !important;
+    }
+    
+    .stream-top .dropdown-menu i {
+        display: none;
+    }
+    
+    .stream-top .dropdown-menu > li > a:hover, .stream-top .dropdown-menu > li > a:focus:hover {
+        background-color: var(--Highlight);
+        color: var(--HighlightText) !important;
+    }
+    
+    .stream-top .dropdown-menu > li > a:focus {
+        background: initial;
+        color: initial;
+    }
+    
+    .stream-top .dropdown-menu .divider{
+        height: 1px;
+        margin: 0;
+        background: var(--ControlDark);
+    }
+    
+    
+    /*
+    a {
+        text-decoration: underline;
+    }
+    */
+    
+    /* CONTENT */
+    article > .content {
+        /*background: var(--Window);*/
+        margin: 0 !important;
+        padding: 22px !important;
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlLightLight),
+            inset 0 -2px 0 0 var(--ControlDarkDark)
+        ;
+    }
+    
+    article a {
+        color: var(--Highlight);
+    }
+    
+    article > .gallery {
+        /*background: var(--Window);*/
+        margin: 0;
+        padding: 12px !important;
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlLightLight),
+            inset 0 -2px 0 0 var(--ControlDarkDark)
+        ;
+    }
+    
+    
+    article > .post-actions {
+        /*background: var(--Window);*/
+        margin: 0;
+        /*padding: 22px !important;*/
+        padding: 8px 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlLightLight),
+            inset 0 -2px 0 0 var(--ControlDarkDark)
+        ;
+    }
+    
+    article > .post-actions a {
+        display: inline-block;
+        background: white;
+        margin: 0;
+        padding: 8px 8px;
+        flex: 0.15;
+        align-self: center;
+        text-align: center;
+        
+        background-color: var(--Control);
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlDarkDark),
+            inset -1px 0 0 0 var(--ControlDarkDark),
+            inset 0 1px 0 0 var(--ControlLight),
+            inset 1px -1px 0 0 var(--ControlLight),
+            
+            inset 0 -2px 0 0 var(--ControlDark),
+            inset -2px 0 0 0 var(--ControlDark),
+            inset 0 2px 0 0 var(--ControlLightLight),
+            inset 2px 0 0 0 var(--ControlLightLight)
+        ;
+    }
+    
+    article > .social_badge {
+        margin: 0;
+        background-color: var(--Control);
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlLightLight),
+            inset 0 -2px 0 0 var(--ControlDarkDark)
+        ;
+    }
+    
+    article > #comments {
+        border: none;
+        background-color: var(--Control);
+    }
+    
+    article #respond {
+        border: none;
+    }
+    
+    /* WIDGETS */
+    
+    .widget {
+        background: var(--Control);
+        border: none;
+        border-radius: 0;
+        padding: 3px;
+        
+        box-shadow:
+            inset 0 -1px 0 0 var(--ControlDarkDark),
+            inset -1px 0 0 0 var(--ControlDarkDark),
+            inset 0 1px 0 0 var(--ControlLight),
+            inset 1px -1px 0 0 var(--ControlLight),
+            
+            inset 0 -2px 0 0 var(--ControlDark),
+            inset -2px 0 0 0 var(--ControlDark),
+            inset 0 2px 0 0 var(--ControlLightLight),
+            inset 2px 0 0 0 var(--ControlLightLight)
+        ;
+        
+    }
+    
+    .widget_title {
+        background: linear-gradient(90deg, var(--Highlight) 0%, var(--GradientActiveCaption) 100%);
+        padding: 2px;
+        
+        min-height: auto;
+        height: 18px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        
+        color: white;
+        font-size: 12px !important;
+        
+    }
+    
+    .copyright {
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    .copyright * {
+        color: black !important;
+    }
+    
+    .copyright ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .copyright li {
+        display: block;
+        padding: 0px;
+    }
+    
+    .copyright > :nth-child(1) {
+        order: 2;
+    }
+    
+    .copyright > :nth-child(2) {
+        order: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        
+    }
+    
+    .copyright > :nth-child(2) > li:not(:first-child):first-letter {
+        text-decoration: underline;
+    }
+    
+    .copyright > :nth-child(2) > li:first-child {
+        color: #fff !important;
+        letter-spacing: 2px;
+        font-size: 10px;
+        font-weight: 800;
+        background: #008080;
+        margin-top: 8px;
+        padding: 14px;
+        
+        box-shadow:
+            inset 0 2px 0 0 var(--ControlDarkDark),
+            inset 2px 0 0 0 var(--ControlDarkDark),
+            inset 0 -2px 0 0 var(--ControlLight),
+            inset 2px 0 0 0 var(--ControlLight),
+            
+            inset 0 3px 0 0 var(--ControlDark),
+            inset 3px 0 0 0 var(--ControlDark),
+            inset 0 -3px 0 0 var(--ControlLightLight),
+            inset -3px 0 0 0 var(--ControlLightLight)
+        ;
+        user-select: none;
+        cursor: wait;
+    }
+    
+    .copyright > :nth-child(2) > li:first-child:before {
+        width: 24px;
+        height: 24px;
+        content: " ";
+        display: block;
+        margin: auto;
+        margin-bottom: 4px;
+        background: url("https://teknoseyir.com/wp-content/themes/ts/images/ts-logo-icon.svg") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+        filter: grayscale(1);
+    }
+    
+    .copyright > :nth-child(2) > li:first-child:after {
+        content: ".exe"
+    }
+    
+    .copyright > :nth-child(3) {
+        order: 1;
+    }
+    
+    img {
+        filter: grayscale(1) contrast(1.25);
+    }
+    
+    .gallery img {
+        outline: 2px solid black;
+    }
+}
